@@ -1,0 +1,27 @@
+{
+  "name": "pterobilling/social-auth",
+  "description": "Add Discord and Github OAuth2 support",
+  "type": "pterobilling-extension",
+  "version": "1.0.0",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Pterobilling\\SocialAuth\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "socialiteproviders/discord": "^4.1",
+    "socialiteproviders/github": "^4.1",
+    "illuminate/support": "^8",
+    "php": "^8"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SocialiteProviders\\Manager\\ServiceProvider",
+        "Pterobilling\\SocialAuth\\SocialAuthServiceProvider"
+      ]
+    }
+  }
+}
